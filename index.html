@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+
+  <title>webplayer</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/onsenui.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <link rel="stylesheet" href="css/onsenui.min.css">
+  <link rel="stylesheet" href="css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+          <ons-page>
+            <ons-list>
+              <ons-list-item onclick="fn.load('home.html')" tappable>
+                Odtwarzanie
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('settings.html')" tappable>
+                Lista utworów
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Ustawienia
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+      </ons-splitter>
+      
+      <template id="home.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              Odtwarzanie
+            </div>
+          </ons-toolbar>
+          <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+            
+          </p>
+        </ons-page>
+      </template>
+      
+      <template id="settings.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              Lista utworów
+            </div>
+          </ons-toolbar>
+        </ons-page>
+      </template>
+      
+      <template id="about.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              Ustawienia
+            </div>
+          </ons-toolbar>
+        </ons-page>
+      </template>
+</body>
+</html>
